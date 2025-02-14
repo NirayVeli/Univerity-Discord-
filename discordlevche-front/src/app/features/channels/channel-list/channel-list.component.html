@@ -1,0 +1,15 @@
+<h2>Списък с канали</h2>
+
+<div>
+  <input [(ngModel)]="newChannelName" placeholder="Име на канала" />
+  <button (click)="createChannel()">Създай</button>
+</div>
+
+<ul>
+  <li *ngFor="let channel of channels">
+    <span>{{ channel.name }}</span>
+    <button *ngIf="channel.id !== undefined" (click)="navigateToChannel(channel.id!)">
+      Отвори канал
+    </button>
+  </li>
+</ul>

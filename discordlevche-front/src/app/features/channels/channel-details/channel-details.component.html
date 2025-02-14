@@ -1,0 +1,25 @@
+<div *ngIf="channel">
+    <h2>{{ channel.name }}</h2>
+    <p>{{ channel.description }}</p>
+  
+    <h3>Участници</h3>
+    <ul>
+      <li *ngFor="let user of members">{{ user.username }}</li>
+    </ul>
+  
+    <h3>Съобщения</h3>
+    <ul class="message-list">
+      <li *ngFor="let message of messages">
+        <strong>{{ getSenderUsername(message.senderId) }}:</strong> {{ message.content }}
+
+      </li>
+    </ul>
+  
+    <div class="message-form">
+      <input [(ngModel)]="newMessage" placeholder="Напиши съобщение...">
+      <button (click)="sendMessage()">Изпрати</button>
+    </div>
+  
+    <button (click)="goBack()">Назад</button>
+  </div>
+  

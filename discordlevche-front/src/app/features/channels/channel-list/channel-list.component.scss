@@ -1,0 +1,33 @@
+h1 {
+    color: #333;
+  }
+  
+  input {
+    padding: 5px;
+    margin-right: 10px;
+  }
+  
+  button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-top: 5px;
+    cursor: pointer;
+  }
+  
+  li:hover {
+    background-color: #f1f1f1;
+  }
+  
